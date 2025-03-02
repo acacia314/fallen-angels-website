@@ -53,6 +53,10 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addFilter("json", function(value) {
+    return JSON.stringify(value, null, 2);
+  })
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {

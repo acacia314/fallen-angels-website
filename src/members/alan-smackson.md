@@ -9,6 +9,7 @@ tags:
   - left
   - center
   - right
+picture: https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png
 ---
 # This is a Heading h1
 

@@ -8,28 +8,18 @@ backend:
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
-# Please run "npx netlify-cms-proxy-server" for local backend
-local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: "Members"
+    name: "members"
+    folder: "src/members"
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Biography", name: "biography", widget: "string" }
+      - { label: "PIcture", name: "picture", widget: "image" }
   - label: "Settings"
     name: "settings"
     editor:

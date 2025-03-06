@@ -1,0 +1,32 @@
+---
+layout: blog
+name: Alan Smackson
+---
+
+<section class="mt-15">
+    {% set members = collections.members %}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {% for member in members | reverse %}
+            <article class="bg-white shadow-lg rounded-lg p-5 text-center">
+                {% if member.data.picture %}
+                    <img src="{{ member.data.picture | url }}" alt="{{ member.data.name }}" class="w-32 h-32 mx-auto rounded-full mb-3">
+                {% endif %}
+
+                <h2 class="font-bold text-xl text-gray-900">
+                    {% if member.data.name %}
+                        {{ member.data.name }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </h2>
+
+                {% if member.data.biography %}
+                    <p class="text-sm text-gray-600 mt-2">
+                        {{ member.data.biography }}
+                    </p>
+                {% endif %}
+            </article>
+        {% endfor %}
+    </div>
+</section>
